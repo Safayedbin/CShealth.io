@@ -1,0 +1,262 @@
+/* COMMON CSS STARTS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    font-size: 1vw;
+    color: #000;
+    
+}
+.clr{
+    clear: both;
+}
+ul li{
+    list-style: none;
+    text-transform: capitalize;
+
+}
+:root{
+    --primary_color:#1D9160;
+    --secondary_color:#FFFFFF;
+    --teritary_color:#9a9c94;
+    
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;;
+    font-weight: 400;
+    margin-bottom: .85rem;
+
+
+}
+p{  
+    
+    font-size: .8rem;
+    font-family: 'Montserrat', sans-serif;;
+    font-weight: 400;
+}
+
+button{
+    font-family: 'Montserrat', sans-serif;;
+    font-weight: 900;
+    margin: 1.25rem 1rem 0 0;
+    padding: 0.5rem 1rem;
+
+}
+.key{
+    border:1px var(--primary_color) solid ; 
+    background-color: var(--secondary_color);
+}
+.card-body h5{
+    font-size: 1rem;
+    color: var(--primary_color);
+    text-align: center;
+    
+}
+
+.card-body h6{
+    font-size: 0.85rem;
+    text-align: center;
+    color: var(--teritary_color);  
+}
+
+/* COMMON CSS ENDS */
+
+/* __________________________________________________________________________________________________________________________________________________________________________ */
+/* __________________________________________________________________________________________________________________________________________________________________________ */
+
+                                                                            HOME PAGE
+
+/* __________________________________________________________________________________________________________________________________________________________________________ */
+/* __________________________________________________________________________________________________________________________________________________________________________ */
+
+/*-------------- */
+/*    NAVBAR    */
+/*--------------*/
+#navbar nav{
+    padding:0.25rem ;
+    
+}
+#navbar nav ul li a{
+    color: var(--primary_color);
+}
+#navbar nav ul li{
+    font-family: 'Montserrat', sans-serif;;
+    font-weight: 900;
+    font-size: clamp(1rem, 0.75rem, 2rem);
+    margin: 2rem 0.85rem 0 0;
+    list-style: none;
+    float: left;
+}
+#navbar nav .leftpart, #navbar nav .rightpart{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+#navbar nav .logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+#navbar nav .logo img{
+    display: block;
+    width: 15rem;
+    max-width: 100%;
+    margin: 0.75rem;
+}
+
+ .loginkey{
+    border:1px var(--primary_color) solid ; 
+    background-color: var(--secondary_color);
+}
+
+/* ------------- */
+/*    NAVBAR    */
+/*--------------*/
+
+/* ------------- */
+/*    BANNER    */
+/*--------------*/
+
+#banner #carouselExampleCaptions .carousel-item{
+    height: 25rem;
+    min-height: 15rem;
+}
+
+
+#banner #carouselExampleCaptions .carousel-item h5{
+    font-size: 56px;
+    filter: drop-shadow(2px 18px 12px #000);
+
+}
+
+/* ------------- */
+/*    BANNER    */
+/*--------------*/
+
+
+/* ------------- */
+/*    EVENTS    */
+/*--------------*/
+#events .box{
+    margin: 3rem;
+    display: flexbox;
+    align-self: center;
+    justify-self: center;
+}
+
+#policy .link-side h6, #events .box h6, #med_section .link-side h6{
+    font-size: 0.95vw;
+    font-weight: 900;
+
+}
+#events h3{
+    font-size: 1vw;
+    font-weight: 900;
+    margin: 2.5rem 0rem ;
+}
+#events .key{
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+
+/*    POLICIES   */
+
+
+.cover img{
+    display: block;
+    margin-right: 2rem;
+    float: left;
+    width: 35rem;
+    max-width: 80%;
+    min-height: 28rem;
+}
+
+
+#policy .link-side{
+    float: right;
+    width: 30rem;
+    margin-top: 5rem;
+}
+
+/* MED PROMO */
+#med_section{
+    background-color: #F5F5F5;
+}
+#med_section .cover img{
+    padding: 3rem 0rem;
+    float: right;
+    
+}
+#med_section .link-side{
+    width: 30rem;
+    margin-top: 5rem;
+}
+
+/* DOCSIDE */
+#Docside h1{
+    font-size: 3rem;
+}
+#Docside h1,#Docside h3{
+    text-align: center;
+    font-weight: 400;
+}
+#Docside .card img{
+    display: block;
+    width: 100%;
+}
+#Docside .card{
+    width: 15rem;
+    max-width: 100%;
+}
+#Docside .card a{
+    display: block;
+    margin: 0 auto;
+}
+
+/* PORTAL SIGNUP */
+#portal_login{
+    background-color: #F5F5F5;
+    padding: 2.5rem 0rem;
+    margin: 3rem 0rem;
+}
+#portal_login h4{
+    margin: 1.5rem 0rem;
+
+
+}
+
+/* FOOTER */
+
+footer {
+    margin: 2rem 5rem; 
+}
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer ul li a{
+    color: var(--primary_color);
+    font-weight: 900;   
+    font-size: 1vw;
+}
+footer .partner{
+    text-align: center;
+}
+footer .partner img{
+    margin-right: 2rem;
+}
+
+
+
+
+
+

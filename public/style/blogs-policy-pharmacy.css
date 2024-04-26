@@ -1,0 +1,181 @@
+/* COMMON CSS STARTS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    font-size: 1vw;
+    color: #000;
+    
+}
+.clr{
+    clear: both;
+}
+ul li{
+    list-style: none;
+    text-transform: capitalize;
+
+}
+:root{
+    --primary_color:#1D9160;
+    --secondary_color:#FFFFFF;
+    --teritary_color:#9a9c94;
+    
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;;
+    font-weight: 400;
+    margin-bottom: .85rem;
+
+
+}
+p{  
+    
+    font-size: .8rem;
+    font-family: 'Montserrat', sans-serif;;
+    font-weight: 400;
+}
+
+button{
+    font-family: 'Montserrat', sans-serif;;
+    font-weight: 900;
+    margin: 1.25rem 1rem 0 0;
+    padding: 0.5rem 1rem;
+
+}
+.key{
+    border:1px var(--primary_color) solid ; 
+    background-color: var(--secondary_color);
+}
+.card-body h5{
+    font-size: 1rem;
+    color: var(--primary_color);
+    text-align: center;
+    
+}
+
+.card-body h6{
+    font-size: 0.85rem;
+    text-align: center;
+    color: var(--teritary_color);  
+}
+
+/* COMMON CSS ENDS */
+
+/*-------------- */
+/*    NAVBAR    */
+/*--------------*/
+#navbar nav{
+    padding:0.25rem ;
+    
+}
+#navbar nav ul li a{
+    color: var(--primary_color);
+}
+#navbar nav ul li{
+    font-family: 'Montserrat', sans-serif;;
+    font-weight: 900;
+    font-size: clamp(1rem, 0.75rem, 2rem);
+    margin: 2rem 0.85rem 0 0;
+    list-style: none;
+    float: left;
+}
+#navbar nav .leftpart, #navbar nav .rightpart{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+#navbar nav .logo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+#navbar nav .logo img{
+    display: block;
+    width: 15rem;
+    max-width: 100%;
+    margin: 0.75rem;
+}
+
+ .loginkey{
+    border:1px var(--primary_color) solid ; 
+    background-color: var(--secondary_color);
+}
+
+/* ------------- */
+/*    NAVBAR    */
+/*--------------*/
+.top h1{
+    margin-top: 7rem;
+    font-size: 2vw;
+    font-weight: 900;
+}
+.caption p{
+    width: 45rem;
+    font-size: 0.85vw;
+}
+#body_section{
+    position: relative;
+}
+#body_section .accordion{
+    width: 15rem;
+    border: 1px var(--primary_color) solid;
+    position: absolute;
+    top: 0%;
+    left: 3%;
+}
+#body_section .container .row{
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+}
+#body_section .card{
+    margin: 0rem 1rem 5rem 0rem;
+    
+}
+.blog-view p{
+    font-size: 0.85vw;
+
+}
+.checkout{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+.cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card .cart span{
+    text-align: center;
+    color: #FFFFFF;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-color: #1D9160;
+
+}
+
+.blood_post .profile{
+    background-color: #dedede;
+    margin-bottom: 0rem;
+}
+.blood_post .profile img{
+    margin-left: 2rem;
+    margin-top: 1rem;
+    border-radius: 50%; 
+    width:8rem ; 
+    height:8rem;
+}
+.blood_post button{
+    width:8rem; 
+    border: none; 
+    margin-left: 0.65rem;
+    
+}
