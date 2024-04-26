@@ -36,19 +36,34 @@
             <div class="row">
                 <div class="col-6">
                     <div class="form">
-                        <form action="" class="login_form">
+                        <form action="/Loggedin" method="get" class="login_form">
                            <div class="body">
                                <div class="row">
                                    <h3>LOGIN</h3>
                                </div>
+                               
                                <div class="row">
                                    <input type="email" name="email" Placeholder="Enter Your Email">
                                </div>
+                               @if (isset($status) && $status === 404)
+                               <div class="row">
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $Message }}
+                                  </div>
+                               </div>
+                               @endif
                                <div class="row">
                                    <input type="password" name="password" Placeholder="Enter Your Password">
                                </div>
+                               @if (isset($status) && $status === 400)
                                <div class="row">
-                                   <button type="button" class=" btn btn-success key" name="access">LOGIN</button>
+                                <div class="alert alert-danger" role="alert">
+                                    {{ $Message }}
+                                  </div>
+                               </div>
+                               @endif
+                               <div class="row">
+                                   <button type="submit" class=" btn btn-success key">LOGIN</button>
                                </div>
                                <div class="row">
                                    <p>Are you new? Do you want to <span><a href="/register"> Signup?</a></span></p>
@@ -75,6 +90,15 @@
 
 
     </div>
+    <script>
+        // Automatically close the alert after a certain time
+        setTimeout(function() {
+            var alert = document.getElementByClass('alert');
+            if (alert) {
+                alert.style.display = 'none';
+            }
+        }, 1000); // Hide the alert after 5 seconds (adjust as needed)
+    </script>
     <script src="js/boostrap/bootstrap.bundle.js"></script>
 </body>
 

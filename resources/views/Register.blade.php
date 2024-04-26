@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="form">
-                        <form action="" class="login_form">
+                        <form action="/createUser" method="get" class="login_form">
                            <div class="body">
                                <div class="row">
                                    <h3>Register</h3>
@@ -54,14 +54,11 @@
                                    <input type="email" name="email" Placeholder="Enter Your Email">
                                </div>
                                <div class="row">
-                                   <input type="password" name="password" Placeholder="Enter Your Password">
-                               </div>
-                               <div class="row">
-                                   <input type="password" name="password" Placeholder="Re-enter your password">
+                                   <input type="password" id="password" name="password" Placeholder="Enter Your Password">
                                </div>
                                
                                <div class="row">
-                                   <button type="button" class=" btn btn-success key" name="access">Register</button>
+                                   <button type="submit" class=" btn btn-success key" name="access">Register</button>
                                </div>
                                <div class="row">
                                    <p>Do you have a Account ? <span><a href="/login"> Login</a></span></p>
@@ -69,31 +66,7 @@
                            </div>
        
                        </form>
-                       {{-- <form action="" class="signup_form">
-                           <div class="body">
-                               <div class="row">
-                                   <h3>SIGNUP</h3>
-                               </div>
-                               <div class="row">
-                                   <div class="col-12" style="padding-left: 0rem;" ><input type="text" name="firstname" Placeholder="First Name" ></div>
-                                   <div class="col"  style="padding-left: 0rem;"><input type="text" name="lastname" Placeholder="Last Name"></div>
-                               </div>
-                               <div class="row">
-                                   <input type="email" name="email" Placeholder="Enter Your Email">
-                               </div>
-                               <div class="row">
-                                   <input type="password" name="password" Placeholder="Enter Your Password">
-                               </div>
-                               <div class="row">
-                                   <button type="button" class=" btn btn-success key" name="access">REGISTER</button>
-                               </div>
-                               <div class="row">
-                                   <p>Do you want to<span><a href=""> Login?</a></span></p>
-                               </div>
-                           </div>
-       
-                       </form> --}}
-       
+                     
                    </div>
                 </div>
             </div>
@@ -111,6 +84,7 @@
 
 
     </div>
+    
     <script src="js/boostrap/bootstrap.bundle.js"></script>
 </body>
 
