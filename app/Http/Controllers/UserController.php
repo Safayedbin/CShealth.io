@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Helper\JWTToken;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Hashing\Argon2IdHasher;
+use Illuminate\Support\Facades\Session;
+
 
 class UserController extends Controller
 {
@@ -41,8 +44,13 @@ class UserController extends Controller
        if(!empty($User)){
         $passwordstring= $User->salt.$request->input('password');
         if( password_verify($passwordstring, $User['password']) ){ 
-            
-            return view('test', ['user'=> json_encode($User)]);
+            $token = JWTToken::CreateToken($User['email']);
+            Session::put('JWTTOKEN', $token);
+            Session::put('user', $User);
+            return view('test', [
+                'user'=> json_encode($User),
+                'token'=> $token
+                ]);
 
         }
         else{

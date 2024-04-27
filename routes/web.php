@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\SHA256HASH;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+
 
 
 /*
@@ -21,8 +23,16 @@ Route::get('/', function () {
 
 Route::get('/test', function(){return view('test');});
 Route::get('/createUser', [UserController::class, 'register']);
+Route::get('/shahtest', [SHA256HASH::class, 'test']);
 Route::get('/Loggedin', [UserController::class, 'login']);
 Route::get('/homepage', function(){return view('Homepage');});
 Route::get('/register', function(){return view('Register');});
 Route::get('/login', function(){return view('login');});
 Route::get('/appointment', function(){return view('Appointment');});
+
+Route::middleware(['SessionAuth'])->group(function(){
+    // Routes under session Management
+
+
+
+});

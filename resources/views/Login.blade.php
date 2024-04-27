@@ -90,15 +90,7 @@
 
 
     </div>
-    <script>
-        // Automatically close the alert after a certain time
-        setTimeout(function() {
-            var alert = document.getElementByClass('alert');
-            if (alert) {
-                alert.style.display = 'none';
-            }
-        }, 1000); // Hide the alert after 5 seconds (adjust as needed)
-    </script>
+    
     <script src="js/boostrap/bootstrap.bundle.js"></script>
 </body>
 
