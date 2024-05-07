@@ -2,14 +2,12 @@
 
 namespace App\Http\Middleware;
 
-use App\Helper\JWTToken;
 use Closure;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Symfony\Component\HttpFoundation\Response;
-use App\Services\Logger;
 
-class SessionTicketChecker
+class PaitentChecker
 {
     /**
      * Handle an incoming request.
@@ -18,20 +16,12 @@ class SessionTicketChecker
      */
     public function handle(Request $request, Closure $next): Response
     {   
-
-        $token=Session::get('JWTTOKEN');
         $user =Session::get('user');
-        $Mail= JWTToken::VerifyToken($token);
-        $logger = new Logger(storage_path('logs/app.log'));
-        $tiketexpiry = JWTToken::TimeOutCounter($token);
-        if(isset($Mail) == $user->email && $tiketexpiry == 'existTicket'){
-            $logger->info('This is an information message');
+        if(isset($user) && $user->role == 'paitent'){
             return $next($request);
         }
         else{
-            $logger->error('This is an error message');
             return view('ProblemDetected');
         }
-        
     }
 }

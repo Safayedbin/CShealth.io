@@ -77,7 +77,7 @@ class SHA256HASH extends Controller
         }
 
         // Main hashing function
-        public function ToHash($message) {
+        public static function ToHash($message) {
             $message =  $this->padding($message);
             $chunks = str_split($message, 64); // Break message into 512-bit chunks
             $this->H = array_map('intval', $this->H);
@@ -144,9 +144,8 @@ class SHA256HASH extends Controller
         return $hashedMessage;
         }
 
-        public function HashMatch(){
-            $hashedMessage = $this->ToHash('Hellworld');
-            $storedMessage = $this->ToHash('Hellworld');
+        public static function HashMatch($hashedMessage, $storedMessage ){
+    
             if(strcmp($hashedMessage, $storedMessage) === 0){
                 echo "matched";
             }

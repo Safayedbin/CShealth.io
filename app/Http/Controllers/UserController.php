@@ -17,13 +17,8 @@ class UserController extends Controller
         
         $password=$request->input('password');
         $concat= $salt.$password;
-        $options = [
-            'memory_cost' => 1<<17, // 128 MB
-            'time_cost'   => 4,
-            'threads'     => 2
-        ];
-        $hashpassowrd= password_hash($concat,PASSWORD_ARGON2ID, $options);
-        $hashpassowrd;
+ 
+        $hashpassowrd= SHA256HASH::ToHash($concat);
 
        
         User::create([
@@ -43,7 +38,7 @@ class UserController extends Controller
 
        if(!empty($User)){
         $passwordstring= $User->salt.$request->input('password');
-        if( password_verify($passwordstring, $User['password']) ){ 
+        if( SHA256HASH::HashMatch($passwordstring, $User['password']) ){ 
             $token = JWTToken::CreateToken($User['email']);
             Session::put('JWTTOKEN', $token);
             Session::put('user', $User);
